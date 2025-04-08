@@ -2,9 +2,16 @@
 This is a camera calibration and lens distortion correction project using openCV python.
 
 ## Project Description
-1. Calibrate a personal camera using a printed chessboard pattern.
-2. Calculate the intrinsic camera matrix and distortion coefficients.
-3. Use the calibration results to correct lens distortion in a video.
+
+This project demonstrates how to calibrate a camera using a chessboard pattern and correct lens distortion in recorded video footage. It is implemented in Python with OpenCV, and follows a structured computer vision workflow to generate accurate camera intrinsic parameters and apply geometric correction.
+
+## Dependencies
+Python 3.x
+OpenCV (opencv-python)
+NumPy
+
+## Install
+    pip install opencv-python numpy
 
 ## Chessboard Pattern Details
 
@@ -15,11 +22,11 @@ This is a camera calibration and lens distortion correction project using openCV
 
 ---
 
-## 📸 Camera Calibration
+##  Camera Calibration
 
 Performed using OpenCV's `cv2.findChessboardCorners` and `cv2.calibrateCamera`.
 
-### Results
+### Result
 <img width="544" alt="cv03 detection_image" src="https://github.com/user-attachments/assets/ecfaff47-cb3a-44aa-b1fe-86c572d944ff" />
 
 - **RMS re-projection error**: **2.8746**
@@ -40,6 +47,16 @@ Performed using OpenCV’s `cv2.initUndistortRectifyMap` and `cv2.remap`.
 
 ---
 
+## File Structure
+
+cv-assignments/
+├── cv03.camera.py                # Calibrate camera from chessboard video
+├── cv03.LENSdc.py                # Apply distortion correction to video
+├── chessboard.avi                # Record chessboard video usind smartphone 
+├── chessboard_corrected.avi      # Output corrected video
+└── README.md                     # Project documentation
+
+---
 ## License
 
 This project is licensed under the MIT License.
